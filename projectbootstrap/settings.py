@@ -16,6 +16,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# To już pewnie masz:
+STATIC_URL = 'static/'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
@@ -133,11 +136,11 @@ TEMPLATES = [
         },
     },
 ]
+# TEGO BRAKUJE (to miejsce, gdzie Django skopiuje pliki podczas budowania):
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# 2. Ścieżka do Twoich plików CSS, JS, Assets
-STATIC_URL = 'static/'
-
+# Opcjonalnie, jeśli masz własne pliki w folderze /static/:
 STATICFILES_DIRS = [
-    BASE_DIR / "static", # <--- Dodaj to (wskazuje główny folder static)
+    os.path.join(BASE_DIR, 'static'),
 ]
 
