@@ -147,4 +147,5 @@ STATICFILES_DIRS = [
 
 # To powie WhiteNoise, aby kompresował pliki (strona będzie szybsza)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
